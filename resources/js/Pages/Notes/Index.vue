@@ -39,28 +39,12 @@ defineProps({notes: Array});
                                     <td class="border px-4 py-2">
                                         {{ note.excerpt }}
                                     </td>
-                                    <td class="border px-4 py-2" :href="route('notes.show', note.id)">
-
-                                        <Link href="/notes" :data="{ query }" preserve-state>Ver</Link>
-
+                                    <td class="border px-4 py-2">
+                                        <Link :href="route('notes.show',note.id)">Ver</Link>
                                     </td>
                                     <td class="border px-4 py-2">
-
-
-
-
-                                        
-                                        <inertia-link :href="route('notes.show', note.id)">
-                                            Editar
-                                        </inertia-link>
-                                        
-                                    </td>
-
-                                    
-
-
-                                    
-                            
+                                        <Link :href="route('notes.edit',note.id)">Editar</Link>
+                                    </td>              
                                 </tr>
                             </table>
                         </div>

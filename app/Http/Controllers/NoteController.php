@@ -39,7 +39,7 @@ class NoteController extends Controller
      */
     public function show(Note $note)
     {
-        //
+        return Inertia::render('Notes/Show', compact('note'));
     }
 
     /**
@@ -47,7 +47,7 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
-        //
+        return Inertia::render('Notes/Edit', compact('note'));
     }
 
     /**
