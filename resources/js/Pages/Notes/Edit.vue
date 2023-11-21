@@ -1,7 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import { useForm } from '@inertiajs/vue3'
-
+import { Link } from '@inertiajs/vue3'
  
 const props = defineProps({
   note: Object
@@ -72,6 +72,8 @@ const destroy = ( id ) => {
                             <a href="#" @click.prevent="destroy">
                                 Eliminar Nota
                             </a>
+                            <hr class="my-6">
+                            <Link :href="route('notes.index')">Volver</Link>
                         </div>
                     </div>
                 </div>

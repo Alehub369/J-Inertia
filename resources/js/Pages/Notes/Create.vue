@@ -1,6 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import { useForm } from '@inertiajs/vue3'
+import { Link } from '@inertiajs/vue3'
 
 const form = useForm({
     excerpt:'',
@@ -49,9 +50,11 @@ const submit = () => {
                                     v-model="form.content"
                                     rows="8">
                                 </textarea>
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                                <button href="route('notes.index')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
                                     Crear
-                                </button>             
+                                </button>
+                                <hr class="my-3">
+                                <Link :href="route('notes.index')">Volver</Link>             
                             </form>
                         </div>
                     </div>
