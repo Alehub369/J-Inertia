@@ -16,6 +16,15 @@ const submit = () => {
     form.put(route('notes.update',props.note.id), form);
 };
 
+const destroy = ( id ) => {
+    if( confirm('Esta seguro de eliminar esta Nota ?') ) {
+        
+        form.delete(route('notes.destroy',props.note.id))
+
+        //useForm({}).delete(route('notes.destroy', id));
+    }
+}
+
 </script>
 
 
@@ -58,6 +67,11 @@ const submit = () => {
                                     Editar
                                 </button>             
                             </form>
+                            <hr class="my-6">
+
+                            <a href="#" @click.prevent="destroy">
+                                Eliminar Nota
+                            </a>
                         </div>
                     </div>
                 </div>
