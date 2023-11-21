@@ -8,7 +8,7 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.put(route('notes.update',props.note.id), form);
+    form.post(route('notes.store'), form);
 };
 
 </script>
